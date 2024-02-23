@@ -6,9 +6,9 @@ public class Main {
         Car vw = new Car("Volkswagen", 4);
         Bicycle cube = new Bicycle("Cube", 2);
         Bicycle desna = new Bicycle("Desna", 2);
-        outputInfo(man);
+
+        ServiceStation serviceStation = new ServiceStation();
+        serviceStation.check(scania);
     }
-   public static void outputInfo(ServiceStation service) {
-       service.check();
-   }
+
 }

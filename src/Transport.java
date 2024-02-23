@@ -1,3 +1,5 @@
+import java.util.SortedMap;
+
 public class  Transport {
     private String modelName;
     private int wheelsCount;
@@ -24,17 +26,24 @@ public class  Transport {
     }
 
     public void updateTyre() {
-        System.out.println("Меняем покрышку");
+        for (int i = 1; i <= getWheelsCount() ; i++) {
+            System.out.print(i + " ");
+            System.out.println("Меняем покрышку " +getModelName());
+        }
     }
 
 
     public void checkEngine() {
-        System.out.println("Проверяем двигатель");
+        System.out.println("Проверяем двигатель " +getModelName());
     }
-
 
     public void checkTrailer() {
-        System.out.println("Проверяем прицеп");
+        if (getWheelsCount() > 6) {
+            System.out.println("Проверяем прицеп " + getModelName());
+        }
     }
 
+    public void checkTransport() {
+        System.out.println(" Обслуживаем " + getModelName());
+    }
 }

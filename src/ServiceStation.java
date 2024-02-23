@@ -1,5 +1,7 @@
-public interface ServiceStation {
+public class ServiceStation implements Service{
 
-      public void check();
-
+      @Override
+      public void check(Transport transport) {
+      transport.checkTransport();
+      }
 }
